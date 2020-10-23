@@ -6,18 +6,13 @@ I hope to build some kind of a mad libs generator.
 ___
 
 
-I need to start working on an algorithm for my mad-gen.
-
-Step 1 will be to print some output to screen that tells the user they
+* Step 1 will be to print some output to screen that tells the user they
 are about to begin a new game. "press enter to begin."
 
-A mad lib should be randomly pulled from a
+* A mad lib should be randomly pulled from a
 list or tuple. I don't know which at this point will work better.
-It probably doesn't matter.
+It probably doesn't matter. Etc the mad lib will need.
 
-The mad lib file should have a stored value for the number of nouns
-adjectives etc the mad lib will need.
+* Users will be asked for input
 
-Users will be asked for input
-
-completed mad lib will be printed to the screen
+* Completed mad lib will be printed to the screen
