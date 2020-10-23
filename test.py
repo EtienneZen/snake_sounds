@@ -1,11 +1,13 @@
-def fahrenheit_to_celsius (temp):       #Converts fahrenheit to celsius
-    """Converts fahrenheit to celsius"""
-    return int((temp - 32) * (5 / 9))
+import string   #string module
 
-def celsius_to_fahrenheit (temp):       #Converts celsius to fahrenheit
-    """Converts celsius to fahrenheit"""
-    return int(temp * (9/5) + 32)
-
+def longest_word (text):
+    """returns the longest word from a string"""
+    long_word = 0
+    long_word_list = text.split ()
+    for i in range (long_word_list):
+        if (len(i) > len(long_word))
+            long_word = i
+return long_word
 
 if __name__ == "__main__":
-    print(celsius_to_fahrenheit(100))
+    print(longest_word("We want a SHRUBBERY"))
