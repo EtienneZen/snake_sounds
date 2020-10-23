@@ -1,13 +1,11 @@
 import string   #string module
 
 def longest_word (text):
-    """returns the longest word from a string"""
-    long_word = 0
-    long_word_list = text.split ()
-    for i in range (long_word_list):
-        if (len(i) > len(long_word))
-            long_word = i
-return long_word
+    """converts to a list and returns the longest word word from the list"""
+    return max(text.split (), key=len)
 
+#used for testing
 if __name__ == "__main__":
-    print(longest_word("We want a SHRUBBERY"))
+    print(longest_word("""The for statement is a tool
+    to traverse things containing items. Strings, lists, and ranges are things containing items,
+    so you can use a for to iterate their elements, like:"""))
