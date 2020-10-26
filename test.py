@@ -1,11 +1,8 @@
-import string   #string module
+import time #importing time module
+from datetime import date   #importing date module from datetime
 
-def longest_word (text):
-    """converts to a list and returns the longest word word from the list"""
-    return max(text.split (), key=len)
+#vairable today storing todays date
+today = date.today()
 
-#used for testing
-if __name__ == "__main__":
-    print(longest_word("""The for statement is a tool
-    to traverse things containing items. Strings, lists, and ranges are things containing items,
-    so you can use a for to iterate their elements, like:"""))
+#printing todays date and times %12h:%min%sec
+print ('Today is', today, 'and it is', time.strftime('%I:%M:%S'))
