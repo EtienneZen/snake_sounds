@@ -25,3 +25,4 @@ a number for verbs, strings, nouns, adjectives, adverbs etc.
  
 * Completed mad lib will be printed to the screen
 	input will ned to be inserted into the correct spot in the text befor it can be printed.
+# dot-config
