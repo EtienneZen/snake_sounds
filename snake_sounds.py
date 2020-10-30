@@ -1,6 +1,8 @@
 #This is my madlib generator I built for the level1tech 'devember' challange.
 #I wanted to learn python and a refresh some basic coding.
 
+    #imported modules
+
 #I think I will need to define a class here for the madlibs
 # madlib txt should be stored in a seperate file
 
@@ -15,9 +17,9 @@ def begin():
                 ___) | | | | (_| |   <  __/    ___) | (_) | |_| | | | | (_| \__ \   
                |____/|_| |_|\__,_|_|\_\___|___|____/ \___/ \__,_|_| |_|\__,_|___/''')
     print('\n\n\n')
-#intro text will go here    
-#i/0 code will go here
-#rando lib here
+    #intro text will go here    
+    #i/0 code will go here
+    #rando lib here
     return
    
 
