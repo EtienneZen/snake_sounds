@@ -7,6 +7,26 @@
 #begin function that introduces the player to the game and prompts them to begin
 #This function will ask the user to hit enter to begin and need to return a random 
 #that will be used to pick a madlib later.
+def begin():
+    print('                                  Welcome to \n')
+    print('''                 ____              _            ____                        _       
+               / ___| _ __   __ _| | _____    / ___|  ___  _   _ _ __   __| |___   
+               \___ \| '_ \ / _` | |/ / _ \   \___ \ / _ \| | | | '_ \ / _` / __|  
+                ___) | | | | (_| |   <  __/    ___) | (_) | |_| | | | | (_| \__ \   
+               |____/|_| |_|\__,_|_|\_\___|___|____/ \___/ \__,_|_| |_|\__,_|___/''')
+    print('\n\n\n')
+#intro text will go here    
+#i/0 code will go here
+#rando lib here
+    return
+   
+
+begin() #used for testing
+    
+
+
+
+
 
 #once madlib has been selected a git-word function will need to get input from a user
 #This function will need to read what words it needs to git,
