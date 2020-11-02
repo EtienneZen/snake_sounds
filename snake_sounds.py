@@ -7,18 +7,21 @@ import random
 # defining madlib class
 class Madlib
     # initializing my madlib class
-    def __init__(self, name, adverb, verb, noun, adjective, number, file_name):
+    def __init__(self, name, title, adverb, verb, noun, adjective, number, file_name):
         self.name = name
+        self.title = title
         self.adverb = adverb
         self.verb = verb
         self.noun = noun
         self.adjective = adjective
         self.number = number
         self.file_name = file_name
+# defining madlib list
+mad_lib_list = []
 
 # defining instances of Madlib
-zoo = Madlib ('A Day At The Zoo!', 2, 3, 3, 4, 0, 'zoo.txt')
-fun = Madlib  ('The Fun Park!', 2, 3, 2, 3, 1, 'fun_park.txt')
+mad_lib_list.append (Madlib ('zoo', 'A Day At The Zoo!', 2, 3, 3, 4, 0, 'zoo.txt'))
+mad_lib_list.append(Madlib ('fun', 'The Fun Park!', 2, 3, 2, 3, 1, 'fun_park.txt'))
 
 #mad_lib_list = {'name': 'zoo.txt', 'verb': 3, 'noun': 3, 'adjective': 4, 'adverb': 2}
                #more
