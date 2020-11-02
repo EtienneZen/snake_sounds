@@ -1,3 +1,4 @@
-import time
+import sys
 
-print (time.time())
+print (sys.argv[0])
+

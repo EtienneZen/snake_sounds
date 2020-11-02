@@ -10,15 +10,23 @@
 #This function will ask the user to hit enter to begin and need to return a random 
 #that will be used to pick a madlib later.
 def begin():
-    print('                                  Welcome to \n')
+    print('      \n\n\n                                    Welcome to\n')
     print('''                 ____              _            ____                        _       
                / ___| _ __   __ _| | _____    / ___|  ___  _   _ _ __   __| |___   
                \___ \| '_ \ / _` | |/ / _ \   \___ \ / _ \| | | | '_ \ / _` / __|  
                 ___) | | | | (_| |   <  __/    ___) | (_) | |_| | | | | (_| \__ \   
                |____/|_| |_|\__,_|_|\_\___|___|____/ \___/ \__,_|_| |_|\__,_|___/''')
-    print('\n\n\n')
-    #intro text will go here    
-    #i/0 code will go here
+    print('\n\n                                                          By Stephen Saunders\n\n')
+                #intro text
+    print('''                    This is a program I worte for the Level1techs 2020 Devember challenge.
+                I challenged myself to learn python and build this simple program as an 
+                example of what I have learned. I really enjoyed the process and could
+                not have done it without all the great people at level1 cheering me on
+                and answerng my questions when I needed help. This is a simple madLib
+                generator. After your press enter a madlib will be selected and you will
+                be prompted to enter some random words.\n\n\n''')
+   
+    input ('                                                             Press enter to continue. . . ')
     #rando lib here
     return
    
