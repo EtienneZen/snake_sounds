@@ -5,10 +5,9 @@
 import random
 
 # defining madlib class
-class Madlib
+class Madlib:
     # initializing my madlib class
     def __init__(self, name, title, adverb, verb, noun, adjective, number, file_name):
-        self.name = name
         self.title = title
         self.adverb = adverb
         self.verb = verb
@@ -16,21 +15,25 @@ class Madlib
         self.adjective = adjective
         self.number = number
         self.file_name = file_name
+
 # defining madlib list
-mad_lib_list = []
+madlib_list = []
 
 # defining instances of Madlib
-mad_lib_list.append (Madlib ('zoo', 'A Day At The Zoo!', 2, 3, 3, 4, 0, 'zoo.txt'))
-mad_lib_list.append(Madlib ('fun', 'The Fun Park!', 2, 3, 2, 3, 1, 'fun_park.txt'))
+zoo = Madlib ('A Day At The Zoo!', 2, 3, 3, 4, 0, 'zoo.txt')
+fun = Madlib ('The Fun Park!', 2, 3, 2, 3, 1, 'fun_park.txt')
 
-#mad_lib_list = {'name': 'zoo.txt', 'verb': 3, 'noun': 3, 'adjective': 4, 'adverb': 2}
-               #more
+# adding class instances to a list
+madlib_list.append(zoo)
+madlib_list.append(fun)
 
+# select and retrun a random item from list
+selected_madlib = random.choice(madlib_list)
 
 # begin function that introduces the player to the game and prompts them to begin
 # This function will ask the user to hit enter to begin and need to return a random
 # that will be used to pick a madlib later.
-def begin(mad_lib_list):
+def begin():
     print('      \n\n\n                                    Welcome to\n')
     print('''                 ____              _            ____                        _       
                / ___| _ __   __ _| | _____    / ___|  ___  _   _ _ __   __| |___   
@@ -43,19 +46,57 @@ def begin(mad_lib_list):
                 I challenged myself to learn python and build this simple program as an 
                 example of what I have learned. I really enjoyed the process and could
                 not have done it without all the great people at level1 cheering me on
-                and answerng my questions when I needed help. This is a simple madLib
+                and answering my questions when I needed help. This is a simple madLib
                 generator. After your press enter a madlib will be selected and you will
                 be prompted to enter some random words.\n\n\n''')
    
     input ('                                                             Press enter to continue. . . ')
 
-    #select and retrun a random item from list
-    selected_mad_lib = random.choice(mad_lib_list)
+    return
+def get_word(selected_madlib):
+    """this function gets words for the madlib and stores them into individual lists"""
+    # prints the title for the selected madlib
+    print ('You will be playing', selected_madlib.title)
 
-    return selected_mad_lib
+    # defines an empty word list
+    adverb_list = []
+    verb_list = []
+    noun_list = []
+    number_list = []
+
+    # if class instance is empty it is skipped else it is looped into a list
+    if selected_madlib.adverb == 0:
+        pass
+    else:
+        for i in selected_madlib.adverb:
+            adverb_list.append(input('Enter an adverb: '))
+
+    # if class instance is empty it is skipped else it is looped into a list
+    if selected_madlib.verb == 0:
+        pass
+    else:
+        for i in selected_madlib.verb:
+            adverb_list.append(input('Enter an verb: '))
+
+    # if class instance is empty it is skipped else it is looped into a list
+    if selected_madlib.noun == 0:
+        pass
+    else:
+        for i in selected_madlib.noun:
+            adverb_list.append(input('Enter an noun: '))
+
+            # if class instance is empty it is skipped else it is looped into a list
+            if selected_madlib.number == 0:
+                pass
+            else:
+                for i in selected_madlib.number:
+                    adverb_list.append(input('Enter an number: '))
+
 
 # Used for testing
-begin()
+# begin ()
+#print (selected_madlib.name)
+
 
 # once madlib has been selected a git-word function will need to get input from a user
 # This function will need to read what words it needs to git,
