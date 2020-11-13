@@ -7,7 +7,7 @@ import random
 # defining madlib class
 class Madlib:
     # initializing my madlib class
-    def __init__(self, name, title, adverb, verb, noun, adjective, number, file_name):
+    def __init__(self, title, adverb, verb, noun, adjective, number, file_name):
         self.title = title
         self.adverb = adverb
         self.verb = verb
@@ -20,8 +20,16 @@ class Madlib:
 madlib_list = []
 
 # defining instances of Madlib
-zoo = Madlib ('A Day At The Zoo!', 2, 3, 3, 4, 0, 'zoo.txt')
+arcade = Madlib ('At The Arcade', 0, 2, 6, 0, 0, 'arcade.txt')
+bigmac = Madlib ('Big Mac Who?', 0, 0, 8, 0, 0, 'bigmac.txt`')
+disney = Madlib ('My Trip To Disney World!', 0, 5, 3, 4, 1, 'disney.txt')
 fun = Madlib ('The Fun Park!', 2, 3, 2, 3, 1, 'fun_park.txt')
+jungle = Madlib ('In The Jungle', 0, 4, 4, 7, 0, 'jungle.txt')
+monkey = Madlib ('The Monkley King!', 1,  1, 1, 1, 0, 'monkey.txt')
+school = Madlib ('The First Day of School!', 1, 1, 6, 3, 1, 'school.txt')
+toy = Madlib ('The Great New Toy', 0, 2, 4, 2, 2, 'toy.txt')
+vidgame = Madlib ('Make Me A Video Game!', 0, 1, 5, 6, 3, 'videogame.txt')
+zoo = Madlib ('A Day At The Zoo!', 2, 3, 3, 4, 0, 'zoo.txt')
 
 # adding class instances to a list
 madlib_list.append(zoo)
@@ -53,6 +61,7 @@ def begin():
     input ('                                                             Press enter to continue. . . ')
 
     return
+
 def get_word(selected_madlib):
     """this function gets words for the madlib and stores them into individual lists"""
     # prints the title for the selected madlib
