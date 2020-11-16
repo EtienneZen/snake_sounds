@@ -19,7 +19,7 @@ class Madlib:
 # defining madlib list
 madlib_list = []
 
-# defining instances of Madlib
+# defining instances of Madlib 
 arcade = Madlib ('At The Arcade', 0, 2, 6, 0, 0, 'arcade.txt')
 bigmac = Madlib ('Big Mac Who?', 0, 0, 8, 0, 0, 'bigmac.txt`')
 disney = Madlib ('My Trip To Disney World!', 0, 5, 3, 4, 1, 'disney.txt')
@@ -64,16 +64,18 @@ def begin():
 
 def get_word(selected_madlib):
     """this function gets words for the madlib and stores them into individual lists"""
-    # prints the title for the selected madlib
-    print ('You will be playing', selected_madlib.title)
-
+    
     # defines an empty word list
     adverb_list = []
     verb_list = []
     noun_list = []
     number_list = []
+    adjective_list = []
 
-    # if class instance is empty it is skipped else it is looped into a list
+    # prints the title for the selected madlib
+    print ('You will be playing', selected_madlib.title)
+
+       # if class instance is empty it is skipped else it is looped into a list
     if selected_madlib.adverb == 0:
         pass
     else:
@@ -85,21 +87,29 @@ def get_word(selected_madlib):
         pass
     else:
         for i in selected_madlib.verb:
-            adverb_list.append(input('Enter an verb: '))
+            verb_list.append(input('Enter an verb: '))
 
     # if class instance is empty it is skipped else it is looped into a list
     if selected_madlib.noun == 0:
         pass
     else:
         for i in selected_madlib.noun:
-            adverb_list.append(input('Enter an noun: '))
+            noun_list.append(input('Enter an noun: '))
 
             # if class instance is empty it is skipped else it is looped into a list
             if selected_madlib.number == 0:
                 pass
             else:
                 for i in selected_madlib.number:
-                    adverb_list.append(input('Enter an number: '))
+                    number_list.append(input('Enter an number: '))
+    
+    # if class instance is empty it is skipped else it is looped into a list
+    if selected_madlib.ajective == 0:
+        pass
+    else:
+        for i in selected_madlib.adjective:
+            adjective_list.append(input('Enter an adjective: '))
+
 
 
 # Used for testing
