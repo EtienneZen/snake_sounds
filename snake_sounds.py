@@ -16,24 +16,20 @@ class Madlib:
         self.number = number
         self.file_name = file_name
 
-# defining madlib list
-madlib_list = []
-
-# defining instances of Madlib 
-arcade = Madlib ('At The Arcade', 0, 2, 6, 0, 0, 'arcade.txt')
-bigmac = Madlib ('Big Mac Who?', 0, 0, 8, 0, 0, 'bigmac.txt`')
+# defining instances of Madlib
+arcade = Madlib ('At The Arcade', 0, 2, 2, 0, 0, 'arcade.txt')
+bigmac = Madlib ('Big Mac Who?', 0, 0, 7, 0, 0, 'bigmac.txt')
 disney = Madlib ('My Trip To Disney World!', 0, 5, 3, 4, 1, 'disney.txt')
 fun = Madlib ('The Fun Park!', 2, 3, 2, 3, 1, 'fun_park.txt')
 jungle = Madlib ('In The Jungle', 0, 4, 4, 7, 0, 'jungle.txt')
 monkey = Madlib ('The Monkley King!', 1,  1, 1, 1, 0, 'monkey.txt')
 school = Madlib ('The First Day of School!', 1, 1, 6, 3, 1, 'school.txt')
 toy = Madlib ('The Great New Toy', 0, 2, 4, 2, 2, 'toy.txt')
-vidgame = Madlib ('Make Me A Video Game!', 0, 1, 5, 6, 3, 'videogame.txt')
+videogame = Madlib ('Make Me A Video Game!', 0, 1, 5, 6, 3, 'videogame.txt')
 zoo = Madlib ('A Day At The Zoo!', 2, 3, 3, 4, 0, 'zoo.txt')
 
 # adding class instances to a list
-madlib_list.append(zoo)
-madlib_list.append(fun)
+madlib_list = arcade, bigmac, disney, fun, jungle, monkey, school, toy, videogame, zoo
 
 # select and retrun a random item from list
 selected_madlib = random.choice(madlib_list)
@@ -57,14 +53,14 @@ def begin():
                 and answering my questions when I needed help. This is a simple madLib
                 generator. After your press enter a madlib will be selected and you will
                 be prompted to enter some random words.\n\n\n''')
-   
+
     input ('                                                             Press enter to continue. . . ')
 
     return
 
 def get_word(selected_madlib):
     """this function gets words for the madlib and stores them into individual lists"""
-    
+
     # defines an empty word list
     adverb_list = []
     verb_list = []
@@ -75,47 +71,53 @@ def get_word(selected_madlib):
     # prints the title for the selected madlib
     print ('You will be playing', selected_madlib.title)
 
-       # if class instance is empty it is skipped else it is looped into a list
+    # if class instance is empty it is skipped else it is looped into a list
     if selected_madlib.adverb == 0:
         pass
     else:
-        for i in selected_madlib.adverb:
+        for i in range (selected_madlib.adverb):
             adverb_list.append(input('Enter an adverb: '))
+    #print (adverb_list)
 
     # if class instance is empty it is skipped else it is looped into a list
     if selected_madlib.verb == 0:
         pass
     else:
-        for i in selected_madlib.verb:
+        for i in range(selected_madlib.verb):
             verb_list.append(input('Enter an verb: '))
 
     # if class instance is empty it is skipped else it is looped into a list
     if selected_madlib.noun == 0:
         pass
     else:
-        for i in selected_madlib.noun:
+        for i in range(selected_madlib.noun):
             noun_list.append(input('Enter an noun: '))
 
-            # if class instance is empty it is skipped else it is looped into a list
-            if selected_madlib.number == 0:
-                pass
-            else:
-                for i in selected_madlib.number:
-                    number_list.append(input('Enter an number: '))
-    
     # if class instance is empty it is skipped else it is looped into a list
-    if selected_madlib.ajective == 0:
+    if selected_madlib.number == 0:
         pass
     else:
-        for i in selected_madlib.adjective:
+         for i in range(selected_madlib.number):
+             number_list.append(input('Enter an number: '))
+
+    # if class instance is empty it is skipped else it is looped into a list
+    if selected_madlib.adjective == 0:
+        pass
+    else:
+        for i in range(selected_madlib.adjective):
             adjective_list.append(input('Enter an adjective: '))
 
-
+    print (adverb_list)    
+    print (verb_list)
+    print (noun_list)
+    print (number_list)
+    print (adjective_list)
 
 # Used for testing
-# begin ()
-#print (selected_madlib.name)
+begin ()
+get_word(selected_madlib)
 
+#print (selected_madlib.name)
 
 # once madlib has been selected a git-word function will need to get input from a user
 # This function will need to read what words it needs to git,
